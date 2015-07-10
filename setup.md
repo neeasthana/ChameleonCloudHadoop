@@ -47,9 +47,6 @@
 6. DO NOT DELETE ANYTHING FROM THIS FILE! Add the line to include your local IP and associated hostname. For example
 	-192.168.0.74   master.hortonworks.cluster.com
 
-7. Add local IPs and hostnames for the agents. For example
-	-
-
 ###Turn off the ip tables
 1. Run command:
 	-sudo chkconfig iptables off
