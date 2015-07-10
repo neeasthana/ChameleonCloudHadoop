@@ -103,7 +103,7 @@
 2. Make sure the ambari server is running using
 	- sudo ambari-server status
 
-##Configure Server and Deploying Agents
+##Configure Server
 
 ###Setup X11 forwarding
 1. open /etc/ssh/sshd_config with root priveledges in a text editor
@@ -137,5 +137,51 @@
 
 3. execute the install_chrome.sh using
 	-sudo ./install_chrome.sh
+
+##Deploy Agents
+
+###Create new snapshots on Chameleon Clouds
+
+###On each agent node...
+1. Change the hostname by running the command
+	-sudo hostname agent.hortonworks.cluster.com
+
+2. Edit the network file using 
+	-sudo vi /etc/sysconfig/network
+
+3. Change the value of hostname to what you just set
+
+4. Add ips and hostnames to /etc/hosts with root priviledges
+
+###Configure the Server to launch agents
+1. Log into the server using ssh and launch google chrome using
+	-google-chrome &
+
+2. Go to the address "localhost:8080"
+
+3. Login using username: admin and password: admin
+
+4. Click "Launch Install Wizard"
+
+5. Name the cluster and click next
+
+6. Select the Stack "HDP 2.2"
+
+7. Add each of the agent's FQDN (values that were added to each of the host files) to the text box
+
+8. Add the .pem file where prompted
+
+9. Change ssh hostname to cc and click next
+
+10. Wait till agents are successfully installed and click next
+
+11. Click "next" through both the master and slave selections
+
+12. Change usernames and password for databases of HIVE, Oozie, and Knox services
+	-I set everything to admin
+
+13. Click "Next" and "Proceed anyways"
+
+14. Install, Start, and Test and click "Next"
 
 ##Run Jobs
