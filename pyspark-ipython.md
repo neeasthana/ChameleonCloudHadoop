@@ -11,6 +11,7 @@ ssh -i [$YOUR_KEY].pem ubuntu@[$YOUR_IP]
 ```
 
 
+
 ##Configure the system and download ipython
 ###Update the Ubuntu system
 ```
@@ -22,19 +23,24 @@ sudo apt-get update
 sudo apt-get install python-pip ipython-notebook
 ```
 
+###Upgrade tornado
+```
+sudo pip install --upgrade ipython tornado
+```
+
 ###Download ipython
 ```
-sudo pip install ipython=3.2.1
+sudo pip install ipython==3.2.1
 ```
 
 ###Download dependencies
 ```
-sudo pip install json... terminado
+sudo pip install jsonschema terminado
 ```
 
-###Upgrade tornado
+###Create notebooks directory
 ```
-sudo pip install --upgrade ipython tornado
+mkdir notebooks
 ```
 
 
@@ -67,6 +73,13 @@ sudo apt-get update
 sudo apt-get install sbt
 ```
 
+###Install java jdk
+```
+sudo apt-get install default-jdk
+```
+
+###Set the hostname in the /etc/hosts
+
 ###Download and Install Spark
 1.Retreive the .tgz file for spark installation
 ```
@@ -96,3 +109,5 @@ export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
 ```
 
 ###Add Spark context to startup folder in nbserver profile and launch ipython server
+
+Creating object for path '/org/freedesktop/NetworkManager/ActiveConnection/2' failed in libnm-glib.
