@@ -45,6 +45,16 @@ mkdir notebooks
 
 
 ##Configure Ipython profile
+
+###Make a new ipython profile
+```
+ipython profile create nbserver
+```
+
+###Might need this to run ipython command
+```
+sudo pip install -I path.py==7.7.1
+```
 -password: neerajlcdm
 -sha1:b312eea4d44b:b0d3d45b28ae79725484e2cbb162d4e18b16f0cb
 

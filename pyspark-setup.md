@@ -82,15 +82,15 @@ vi ipython_notebook_config.py
 
 Add the following lines to this file after line 3:
 ```	
-	#Kernel Configuration
-	c.IPKernelApp.pylab = 'inline' # if you want plotting support always
+#Kernel Configuration
+c.IPKernelApp.pylab = 'inline' # if you want plotting support always
 
-	#Notebook config
-	c.NotebookApp.certline = u'/home/pysparkipython.pem'
-	c.NotebookApp.ip = '*'
-	c.NotebookApp.open_browser = False
-	c.NotebookApp.password = u'sha1:a2c09a07de95:3bf56300860045d0e8127d858014413b461b7a1f'
-	c.NotebookApp.port = 8888
+#Notebook config
+c.NotebookApp.certline = u'/home/pysparkipython.pem'
+c.NotebookApp.ip = '*'
+c.NotebookApp.open_browser = False
+c.NotebookApp.password = u'sha1:a2c09a07de95:3bf56300860045d0e8127d858014413b461b7a1f'
+c.NotebookApp.port = 8888
 ```
 
 Go into the startup folder and create a file named '00-pyspark-setup.py':
