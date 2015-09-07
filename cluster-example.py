@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.join(spark_home, 'python/lib/py4j-0.8.2.1-src.zip'))
 import pyspark
 from pyspark import SparkContext, SparkConf
 
-conf = SparkConf().setMaster("spark://10.0.3.70:7077").setAppName("Testing Neeraj")
+conf = SparkConf().setMaster("spark://10.0.3.70:7077").setAppName("Testing Neeraj").set("spark.driver.port",8200)
 sc = SparkContext(conf=conf)
 
 
