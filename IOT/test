@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Create proper HDFS directories
+hadoop fs -mkdir /home/ubuntu/IOT/traffic
+hadoop fs -mkdir /home/ubuntu/IOT/weather
+
+#Local File Storage locations
+TRAFFIC_FEB_FILES=/home/ubuntu/IOT_data/traffic_feb_june/*
+WEATHER_FEB_FILES=/home/ubuntu/IOT_data/weather_feb_june/*
+
+#Iterate through traffic files and add them to HDFS
+for f in $TRAFFIC_FEB_FILES
+do
+  hadoop fs -put "$f" /home/ubuntu/IOT/traffic/
+  echo "Done processing $f file..."
+done
+
+#Iterate through waether files and add them to HDFS
+for f in $WEATHER_FEB_FILES
+do
+  hadoop fs -put "$f" /home/ubuntu/IOT/weather/
+  echo "Done processing $f file..."
+done
